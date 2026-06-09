@@ -6,3 +6,5 @@ variables:
     value: developer
   - name: password
     value: password
+  - name: accessToken
+    value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkZXZlbG9wZXIiLCJleHAiOjE3ODEwMjU1MzJ9.95Oiq69bmueOD0F5teVwO6ikdrov2R3WK7koeEEZ_L8
