@@ -1,0 +1,8 @@
+name: LOCAL
+variables:
+  - name: host
+    value: http://localhost:8787
+  - name: username
+    value: developer
+  - name: password
+    value: password
