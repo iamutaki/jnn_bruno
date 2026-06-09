@@ -1,0 +1,23 @@
+info:
+  name: UPDATE
+  type: http
+  seq: 3
+
+http:
+  method: PUT
+  url: "{{host}}/district/01KTPMK8CE80EHFVX95CFV1DX9"
+  headers:
+    - name: Authorization
+      value: Bearer {{accessToken}}
+  body:
+    type: json
+    data: |-
+      {
+        "name": "D1 EDIT"
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

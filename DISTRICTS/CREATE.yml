@@ -1,0 +1,23 @@
+info:
+  name: CREATE
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{host}}/district"
+  headers:
+    - name: Authorization
+      value: Bearer {{accessToken}}
+  body:
+    type: json
+    data: |-
+      {
+        "name": "D1"
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

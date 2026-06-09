@@ -1,11 +1,14 @@
 info:
-  name: DISTRICT_LISTS
+  name: LISTS
   type: http
   seq: 1
 
 http:
   method: GET
-  url: ""
+  url: "{{host}}/sub-district"
+  headers:
+    - name: Authorization
+      value: Bearer {{accessToken}}
   auth: inherit
 
 settings:

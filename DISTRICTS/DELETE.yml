@@ -1,14 +1,17 @@
 info:
-  name: DISTRICT_CREATE
+  name: DELETE
   type: http
-  seq: 2
+  seq: 4
 
 http:
-  method: POST
-  url: "{{host}}/district"
+  method: DELETE
+  url: "{{host}}/district/01KTPMK8CE80EHFVX95CFV1DX9"
   headers:
     - name: Authorization
       value: Bearer {{accessToken}}
+  body:
+    type: json
+    data: ""
 
 settings:
   encodeUrl: true
