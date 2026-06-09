@@ -6,6 +6,13 @@ info:
 http:
   method: POST
   url: "{{host}}/auth/login"
+  body:
+    type: json
+    data: |-
+      {
+        "username": "developer",
+        "password": "password"
+      }
   auth: inherit
 
 settings:
