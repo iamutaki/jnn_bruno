@@ -5,10 +5,10 @@ info:
 
 http:
   method: GET
-  url: "{{host}}/district"
-  auth:
-    type: bearer
-    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkZXZlbG9wZXIiLCJleHAiOjE3ODEwMjU0NDJ9.X6WEzIe6mCH0-NjQDjCvMUSNm7EpD4YfeDuYYntTtrs
+  url: "{{host}}/v1/district"
+  headers:
+    - name: Authorization
+      value: Bearer {{accessToken}}
 
 settings:
   encodeUrl: true

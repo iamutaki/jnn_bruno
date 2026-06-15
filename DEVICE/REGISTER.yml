@@ -1,11 +1,11 @@
 info:
-  name: CREATE
+  name: REGISTER
   type: http
   seq: 1
 
 http:
   method: POST
-  url: "{{host}}/v1/district"
+  url: "{{host}}/v1/device/register"
   headers:
     - name: Authorization
       value: Bearer {{accessToken}}
@@ -13,8 +13,10 @@ http:
     type: json
     data: |-
       {
-        "name": "D1"
+        "udid": "a",
+        "fcmToken": "bb"
       }
+  auth: inherit
 
 settings:
   encodeUrl: true

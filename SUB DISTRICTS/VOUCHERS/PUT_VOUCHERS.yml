@@ -1,11 +1,11 @@
 info:
-  name: CREATE
+  name: PUT_VOUCHERS
   type: http
-  seq: 1
+  seq: 2
 
 http:
-  method: POST
-  url: "{{host}}/v1/district"
+  method: PUT
+  url: "{{host}}/v1/sub-district/01KTRATCWDR4C5BZBZ80KSTJ45/voucher"
   headers:
     - name: Authorization
       value: Bearer {{accessToken}}
@@ -13,8 +13,11 @@ http:
     type: json
     data: |-
       {
-        "name": "D1"
+        "voucherIds": [
+          "01KTRATZHPXFG1PHHCPHYPXBSC"
+        ]
       }
+  auth: inherit
 
 settings:
   encodeUrl: true

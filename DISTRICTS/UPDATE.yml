@@ -1,11 +1,11 @@
 info:
   name: UPDATE
   type: http
-  seq: 3
+  seq: 4
 
 http:
-  method: PUT
-  url: "{{host}}/district/01KTPMK8CE80EHFVX95CFV1DX9"
+  method: PATCH
+  url: "{{host}}/v1/district/01KTPMK8CE80EHFVX95CFV1DX9"
   headers:
     - name: Authorization
       value: Bearer {{accessToken}}

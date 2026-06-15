@@ -1,20 +1,17 @@
 info:
-  name: CREATE
+  name: DELETE
   type: http
-  seq: 1
+  seq: 4
 
 http:
-  method: POST
-  url: "{{host}}/v1/district"
+  method: DELETE
+  url: "{{host}}/v1/role/01KTPMK8CE80EHFVX95CFV1DX9"
   headers:
     - name: Authorization
       value: Bearer {{accessToken}}
   body:
     type: json
-    data: |-
-      {
-        "name": "D1"
-      }
+    data: ""
 
 settings:
   encodeUrl: true

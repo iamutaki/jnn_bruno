@@ -1,0 +1,33 @@
+info:
+  name: CREATE
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{host}}/v1/reseller"
+  headers:
+    - name: Authorization
+      value: Bearer {{accessToken}}
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Toko Jaya",
+        "username": "tokojaya",
+        "password": "rahasia123",
+        "phone": "081234567890",
+        "avatar": "https://example.com/avatar.jpg",
+        "venuePhoto": "https://example.com/venue.jpg",
+        "subDistrictId": "01KTRATCWDR4C5BZBZ80KSTJ45",
+        "commissionRate": 10,
+        "commissionAmount": 5000,
+        "lat": -6.2088,
+        "lng": 106.8456
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

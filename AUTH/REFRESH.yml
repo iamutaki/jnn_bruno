@@ -1,0 +1,29 @@
+info:
+  name: REFRESH
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{host}}/v1/auth/refresh"
+  body:
+    type: json
+    data: |-
+      {
+        "refreshToken": "v4.local.sCsXaIBggdmKNX2VxrP7Np_DNxLZinFVDMFeh4ZN_OmKDtqWzLlwz3W-NwCM6yTF5U0kpRLboEWIoFEAuQM7bBmdClIaZQWORLl2SuFs_vTHwmB7MI2hgsSXok2m9vKk3SG6QzrSJsk1RwGmpvUbAeLD-vkRAKjLrAxPDCkUt-d0VbwnnRMf2B-CTfH7qJNmZfxc9g"
+      }
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        const body = res.getBody();
+
+        bru.setEnvVar("accessToken", body.data.accessToken);
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

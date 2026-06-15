@@ -1,11 +1,11 @@
 info:
   name: DELETE
   type: http
-  seq: 4
+  seq: 2
 
 http:
   method: DELETE
-  url: "{{host}}/district/01KTPMK8CE80EHFVX95CFV1DX9"
+  url: "{{host}}/v1/district/01KTPMK8CE80EHFVX95CFV1DX9"
   headers:
     - name: Authorization
       value: Bearer {{accessToken}}

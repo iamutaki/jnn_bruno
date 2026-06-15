@@ -1,20 +1,14 @@
 info:
-  name: CREATE
+  name: GET_ONE
   type: http
-  seq: 1
+  seq: 5
 
 http:
-  method: POST
-  url: "{{host}}/v1/district"
+  method: GET
+  url: "{{host}}/v1/user/01KTRSK1DADB5CFWQSJMTQ5DTP"
   headers:
     - name: Authorization
       value: Bearer {{accessToken}}
-  body:
-    type: json
-    data: |-
-      {
-        "name": "D1"
-      }
 
 settings:
   encodeUrl: true

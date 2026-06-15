@@ -1,11 +1,11 @@
 info:
-  name: CREATE
+  name: ASSIGN_ROLES
   type: http
-  seq: 1
+  seq: 3
 
 http:
   method: POST
-  url: "{{host}}/v1/district"
+  url: "{{host}}/v1/user-role"
   headers:
     - name: Authorization
       value: Bearer {{accessToken}}
@@ -13,8 +13,12 @@ http:
     type: json
     data: |-
       {
-        "name": "D1"
+        "userId": "01KTPRNHHBH8R583YHW6HEBRPH",
+        "roleIds":[
+          "01KTPRFBP3KYQR7XFYG42HEMTP"
+        ]
       }
+  auth: inherit
 
 settings:
   encodeUrl: true

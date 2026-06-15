@@ -1,20 +1,15 @@
 info:
-  name: CREATE
+  name: GET_USER_ROLES
   type: http
   seq: 1
 
 http:
-  method: POST
-  url: "{{host}}/v1/district"
+  method: GET
+  url: "{{host}}/v1/user-role/user/01KTPRNHHBH8R583YHW6HEBRPH"
   headers:
     - name: Authorization
       value: Bearer {{accessToken}}
-  body:
-    type: json
-    data: |-
-      {
-        "name": "D1"
-      }
+  auth: inherit
 
 settings:
   encodeUrl: true
